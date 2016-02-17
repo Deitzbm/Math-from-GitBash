@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+var math = process.argv[2];
+var	num1 = parseInt(process.argv[3]);
+var	num2 = parseInt(process.argv[4]);
+var answer;
+
+
+if (math == "add") 
+	{
+		answer = num1 + num2;
+	}
+
+else if (math == "subtract") 
+	{
+		answer = num1 - num2;
+	}
+
+else if (math == "multiply") 
+	{
+		answer = num1 * num2;
+	}
+
+else if (math == "divide") 
+	{
+		if(num2 != 0)
+		{
+			answer = num1 / num2;
+		}
+		else
+		{
+			console.log("Cannot divide by 0");	
+		}
+	}
+else
+{
+	console.log("Process not available");
+}
+
+console.log(answer);
